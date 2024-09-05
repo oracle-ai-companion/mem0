@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field, model_validator
 
 class VectorStoreConfig(BaseModel):
     provider: str = Field(
-        description="Provider of the vector store (e.g., 'qdrant', 'chroma')",
+        description="Provider of the vector store (e.g., 'qdrant', 'chroma', 'milvus')",  # Update description
         default="qdrant",
     )
     config: Optional[Dict] = Field(

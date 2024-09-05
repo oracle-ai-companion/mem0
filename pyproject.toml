@@ -25,6 +25,8 @@ sqlalchemy = "^2.0.31"
 langchain-community = "^0.2.12"
 neo4j = "^5.23.1"
 rank-bm25 = "^0.2.2"
+langsmith = "^0.1.114"
+pymilvus = "^2.4.6"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.2.2"
@@ -40,3 +42,6 @@ pytest = "^8.2.2"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
